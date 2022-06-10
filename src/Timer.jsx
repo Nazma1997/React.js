@@ -33,6 +33,21 @@ class Timer extends Component {
           }, 1000)
         }
       }
+
+      stopTimer = () => {
+        if(this.intervalId){
+          clearInterval(this.intervalId);
+          this.intervalId = null;
+        }
+      }
+
+      resetTimer = () => {
+       
+          this.setState({count: 0})
+          clearInterval(this.intervalId);
+          this.intervalId = null
+        
+      }
       
   render(){
     return(
@@ -44,8 +59,8 @@ class Timer extends Component {
               <button onClick={this.decrementTimer}>Decrement</button>
               <div>
                   <button onClick={this.startTimer }>Start</button>
-                  <button>Stop</button>
-                  <button>Reset</button>
+                  <button onClick={this.stopTimer}>Stop</button>
+                  <button onClick={this.resetTimer}>Reset</button>
            </div>
            </div>
           
