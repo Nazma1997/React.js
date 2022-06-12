@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import './App.css'
+import ReactFrom from './components/reactFrom';
 // import Event from './components/eventListener';
-import From from './components/inputFild';
+// import From from './components/inputFild';
 // import Timer from './Timer';
 
 class App extends Component {
@@ -10,7 +11,8 @@ class App extends Component {
        
         
          <div>
-           <From></From>
+           {/* <From></From> */}
+           <ReactFrom></ReactFrom>
         </div>
        
       
