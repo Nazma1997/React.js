@@ -1,6 +1,6 @@
 .card {
   margin: auto;
-  padding:20px 30px 20px 50px;
+  padding:20px 40px 20px 40px;
   margin-top: 100px;;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
@@ -23,4 +23,28 @@ button{
 }
 span{
   font-weight: 700;
+}
+
+input{
+  padding: 5px 30px 5px 30px;
+ 
+  
+}
+
+.SelectTerm{
+  margin-top: 5px;
+  padding: 5px 60px 5px 60px;
+}
+.textType{
+  margin-top: 5px;
+  padding: 5px 40px 5px 40px;
+}
+.dateInput{
+  margin-top: 5px;
+  padding: 5px 50px 5px 50px;
+}
+
+.main{
+  text-align: center;
+  
 }

@@ -1,10 +1,19 @@
 import React, {Component} from 'react';
 import './App.css'
-import Timer from './Timer'
+// import Event from './components/eventListener';
+import From from './components/inputFild';
+// import Timer from './Timer';
+
 class App extends Component {
   render(){
     return(
-        <Timer></Timer>
+       
+        
+         <div>
+           <From></From>
+        </div>
+       
+      
     )
   }
 }

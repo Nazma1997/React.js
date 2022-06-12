@@ -53,7 +53,7 @@ class Timer extends Component {
     return(
       <div className='App'>
             <div className='card'>
-              <h1>Timer in Hour</h1>
+              <h1>Timer in Second</h1>
               <button onClick={this.incrementTimer}>Increment</button>
               <span>{this.state.count}</span>
               <button onClick={this.decrementTimer}>Decrement</button>
