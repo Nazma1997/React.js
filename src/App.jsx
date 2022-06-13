@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css'
+import FullFrom from './components/ReactFrom/fullFrom';
 import ReactFrom from './components/reactFrom';
 // import Event from './components/eventListener';
 // import From from './components/inputFild';
@@ -12,7 +13,8 @@ class App extends Component {
         
          <div>
            {/* <From></From> */}
-           <ReactFrom></ReactFrom>
+           {/* <ReactFrom></ReactFrom> */}
+           <FullFrom></FullFrom>
         </div>
        
       

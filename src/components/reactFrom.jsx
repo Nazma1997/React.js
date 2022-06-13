@@ -15,7 +15,7 @@ class ReactFrom extends Component {
   SubmitHandler = event => {
     event.preventDefault()
 
-    
+
     console.log(this.state)
     event.target.reset()
     this.setState({  name: "",
@@ -39,4 +39,4 @@ class ReactFrom extends Component {
   }
 }
 
-export default ReactFrom;
+export default ReactFrom; 
