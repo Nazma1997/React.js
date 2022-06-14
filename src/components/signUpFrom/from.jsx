@@ -72,7 +72,7 @@ const From = ({values, handleChange, agreement, handleAgreement, handleSubmit})=
               /> I agree
             </label>
           </div>
-          <button type='submit'> Create User</button>
+          <button type='submit' disabled= {!agreement}> Create User</button>
         </form>
       )
 }

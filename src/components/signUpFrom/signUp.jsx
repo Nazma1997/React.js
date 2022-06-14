@@ -20,7 +20,7 @@ class SignUp extends Component {
     this.setState({
       values: {
         ...this.state.values,
-        [event.target.values] : event.target.value
+        [event.target.name] : event.target.value
       }
     })
   };
