@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import TextInput from './input';
+import From from './from';
+
 
 
 
@@ -25,36 +26,16 @@ class ReactFrom extends Component {
   }
 
   render(){
-    const {name, email, password} = this.state
+    // const {name, email, password} = this.state
     return(
      
       <div style={{textAlign:'center'}}> <br />
-      <form onSubmit={this.submitHandler}>
-        <TextInput
-                   name = 'name'
-                  placeholder='Enter Your Name'
-                   type = 'text'
-                   value = {name}
-                  onChange ={this.handleChange}
-        /> <br /> <br />
-        <TextInput
-            name = 'email'
-            placeholder= 'Enter Your Email'
-             type = 'text'
-           value = {email}
-           onChange ={this.handleChange}
-         /> <br /> <br />
-        <TextInput
-             name = 'password'
-             placeholder='Enter Your Password'
-              type = 'password'
-             value = {password}
-            onChange ={this.handleChange}
-         /> <br /> <br />
-
-
-      <button type='submit'>Submit</button>
-    </form>
+      <h3>Simple From With React</h3>
+       <From
+          values= {this.state}
+          handleChange = {this.handleChange}
+          submitHandler = {this.submitHandler}
+        />
 
       </div>
     )

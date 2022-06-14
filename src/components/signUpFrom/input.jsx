@@ -8,7 +8,7 @@ const TextInput = props => (
      id = {props.id}
      placeholder = {props.placeholder}
      value = {props.value}
-     onChange = {props.onChange}
+     onBlur = {props.onBlur}
    />
 );
 
@@ -18,7 +18,7 @@ TextInput.propTypes = {
   id : PropTypes.string.isRequired,
   placeholder:  PropTypes.string.isRequired,
   value : PropTypes.string.isRequired,
-  onChange : PropTypes.func.isRequired
+  onBlur : PropTypes.func.isRequired
 };
 
 TextInput.defaultProps = {

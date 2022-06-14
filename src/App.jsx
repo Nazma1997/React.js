@@ -15,8 +15,8 @@ class App extends Component {
          <div>
            {/* <From></From> */}
            {/* <ReactFrom></ReactFrom> */}
-           <FullFrom></FullFrom>
-           {/* <SignUp /> */}
+           {/* <FullFrom></FullFrom> */}
+           <SignUp />
         </div>
        
       

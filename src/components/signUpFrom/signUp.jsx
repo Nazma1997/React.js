@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import From from './from';
 
 const initValues = {
   name: '',
@@ -33,7 +34,7 @@ class SignUp extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    console.log(this.state);
+    console.log(this.state.values);
 
     event.target.reset()
     this.setState({values : initValues, agreement: false})
@@ -44,6 +45,13 @@ class SignUp extends Component {
     return(
       <div style={{textAlign: 'center'}}>
           <h1>SignUp From</h1>
+          <From
+             values= {this.state.values}
+             agreement = {this.state.agreement}
+             handleChange = {this.handleChange}
+             handleAgreement = {this.handleAgreement}
+             handleSubmit = {this.handleSubmit}
+          ></From>
       </div>
     )
   }
