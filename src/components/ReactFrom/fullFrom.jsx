@@ -1,33 +1,5 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-
-const TextInput = props => (
-   <input 
-     type={props.type}
-     name = {props.name}
-     id = {props.id}
-     placeholder = {props.placeholder}
-     value = {props.value}
-     onChange = {props.onChange}
-   />
-);
-
-TextInput.propTypes = {
-  name : PropTypes.string.isRequired,
-  type : PropTypes.string.isRequired,
-  id : PropTypes.string.isRequired,
-  placeholder:  PropTypes.string.isRequired,
-  value : PropTypes.string.isRequired,
-  onChange : PropTypes.func.isRequired
-};
-
-TextInput.defaultProps = {
-    type: 'text',
-    placeholder: ''
-};
-
-
-
+import TextInput from './input';
 
 
 
@@ -56,33 +28,33 @@ class ReactFrom extends Component {
     const {name, email, password} = this.state
     return(
      
-      <div>
+      <div style={{textAlign:'center'}}> <br />
       <form onSubmit={this.submitHandler}>
-  <TextInput
-     name = 'name'
-     placeholder='Enter Your Name'
-     type = 'text'
-     value = {name}
-     onChange ={this.handleChange}
-  />
-  <TextInput
-     name = 'email'
-     placeholder='Enter Your Email'
-     type = 'text'
-     value = {email}
-     onChange ={this.handleChange}
-  />
-  <TextInput
-     name = 'password'
-     placeholder='Enter Your Password'
-     type = 'password'
-     value = {password}
-     onChange ={this.handleChange}
-  />
+        <TextInput
+                   name = 'name'
+                  placeholder='Enter Your Name'
+                   type = 'text'
+                   value = {name}
+                  onChange ={this.handleChange}
+        /> <br /> <br />
+        <TextInput
+            name = 'email'
+            placeholder= 'Enter Your Email'
+             type = 'text'
+           value = {email}
+           onChange ={this.handleChange}
+         /> <br /> <br />
+        <TextInput
+             name = 'password'
+             placeholder='Enter Your Password'
+              type = 'password'
+             value = {password}
+            onChange ={this.handleChange}
+         /> <br /> <br />
 
 
- <button type='submit'>Submit</button>
- </form>
+      <button type='submit'>Submit</button>
+    </form>
 
       </div>
     )
