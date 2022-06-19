@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css'
-import ControlledFrom from './components/controlledFrom';
+import FullForm from './components/splite-From/spliteFrom';
+// import ControlledFrom from './components/controlledFrom';
 // import InputFrom from './components/inputElements/input';
 // import ReactFrom from './components/reactFrom';
 // import Event from './components/eventListener';
@@ -16,7 +17,8 @@ class App extends Component {
          <div>
           {/* <InputFrom></InputFrom> */}
           {/* <UncontrolledFrom></UncontrolledFrom> */}
-          <ControlledFrom></ControlledFrom>
+          {/* <ControlledFrom></ControlledFrom> */}
+          <FullForm></FullForm>
         </div>
        
       
