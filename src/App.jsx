@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import './App.css'
-import SignUp from './components/signUpFrom/signUp';
-import FullFrom from './components/ReactFrom/fullFrom';
+import InputFrom from './components/inputElements/input';
 // import ReactFrom from './components/reactFrom';
 // import Event from './components/eventListener';
-// import From from './components/inputFild';
+
 // import Timer from './Timer';
 
 class App extends Component {
@@ -13,10 +12,7 @@ class App extends Component {
        
         
          <div>
-           {/* <From></From> */}
-           {/* <ReactFrom></ReactFrom> */}
-           {/* <FullFrom></FullFrom> */}
-           <SignUp />
+          <InputFrom></InputFrom>
         </div>
        
       

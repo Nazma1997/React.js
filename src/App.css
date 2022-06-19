@@ -44,7 +44,27 @@ input{
   padding: 5px 50px 5px 50px;
 }
 
-.main{
+/* .main{
   text-align: center;
   
+} */
+
+.InputField{
+  width: 100%;
+  padding: 12px 60px 12px 60px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+}
+.mainDiv {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 10px 200px 10px 200px;
+  /* text-align: center; */
+  justify-content: center;
+  align-items: center;
 }
