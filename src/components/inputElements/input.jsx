@@ -9,6 +9,17 @@ class InputFrom extends React.Component {
     birthDate: ''
   }
 
+  handleChange = event => {
+    this.setState({
+      [event.target.name] : event.target.value
+    })
+  }
+
+  buttonHandler = event => {
+    event.preventDefault();
+    console.log(this.state)
+  }
+
   render(){
 
    
@@ -19,15 +30,15 @@ class InputFrom extends React.Component {
           <h3 style={{textAlign:'center', marginBottom:'20px'}}>Input From With React</h3>
           <div>
             <p>Enter Your Name</p>
-            <input name='name' value={name} className='InputField' type="text" />
+            <input onChange={this.handleChange} name='name' value={name} className='InputField' type="text" />
           </div>
           <div>
             <p>Enter Your Email</p>
-            <input name='email' value={email} className='InputField' type="email" />
+            <input onChange={this.handleChange} name='email' value={email} className='InputField' type="email" />
           </div>
           <div>
             <p>Select Your Country</p>
-            <select name="country" value={country} className='InputField'>
+            <select onChange={this.handleChange} name="country" value={country} className='InputField'>
               <option >Select Your Country</option>
               <option value="Bangladesh">Bangladesh</option>
               <option value="India">India</option>
@@ -36,14 +47,14 @@ class InputFrom extends React.Component {
           </div>
           <div>
             <p>Tell About Yourself</p>
-           <textarea name="birthDate" className='InputField'></textarea>
+           <textarea onChange={this.handleChange} name="bio" value={bio} className='InputField '></textarea>
           </div>
           <div>
             <p>Give Your Birth Date</p>
-            <input name='birthDate' value={birthDate} className='InputField' type="date" />
+            <input onChange={this.handleChange} name='birthDate' value={birthDate} className='InputField' type="date" />
           </div>
 
-          <button>Submit</button>
+          <button onClick={this.buttonHandler} >Submit</button>
       </div>
     )
   }
