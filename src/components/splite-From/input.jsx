@@ -8,8 +8,9 @@ const InputFrom = props => {
     <div className='mainDiv'>
       <input
        className='InputField'
-       type="props.type"
+       type={props.type}
        name={props.name}
+       value={props.value}
        placeholder= {props.placeholder}
        onChange= {props.onChange}
        />

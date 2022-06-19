@@ -6,26 +6,32 @@ const Form = props => {
   return(
     <div className='mainDiv'>
       <form onSubmit={props.handleSubmit}>
+        
       <TextInput 
            className='InputField'
            type="text"
-           name={props.values.name}
-           placeholder= {props.placeholder}
-           onChange= {props.onChange}
+           name='name'
+           value={props.values.name}
+           placeholder= 'Enter Your Name'
+           onChange= {props.handleChange}
        />
+       
         <TextInput 
            className='InputField'
            type="email"
-           name={props.values.name}
-           placeholder= {props.placeholder}
-           onChange= {props.onChange}
+           name='email'
+           value={props.values.email}
+           placeholder= 'Enter Your Email'
+           onChange= {props.handleChange}
        />
-       <TextInput 
+       
+       <TextInput
            className='InputField'
            type="password"
-           name={props.values.name}
-           placeholder= {props.placeholder}
-           onChange= {props.onChange}
+           name='password'
+           value={props.values.password}
+           placeholder= 'Enter Your Password'
+           onChange= {props.handleChange}
        />
        <button type='submit'>Submit</button>
       </form>
