@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import '../../App.css';
+import FromField from './from';
 
 
 const initValues = {
@@ -44,7 +45,13 @@ class SignUp extends Component {
     return(
       <div className='mainDiv'>
          <h4 style={{textAlign:'center', marginBottom:'20px'}}>SignUp From With React</h4>
-         
+
+         <FromField 
+            values={this.state}
+            handleChange={this.handleChange}
+            handleSubmit={this.handleSubmit}
+            
+         />
       </div>
     )
   }
