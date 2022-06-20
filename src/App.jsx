@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './App.css'
-import FullForm from './components/splite-From/spliteFrom';
+import SignUp from './components/SignUpFrom.jsx/SignUp';
+
+// import FullForm from './components/splite-From/spliteFrom';
 // import ControlledFrom from './components/controlledFrom';
 // import InputFrom from './components/inputElements/input';
 // import ReactFrom from './components/reactFrom';
@@ -18,7 +20,8 @@ class App extends Component {
           {/* <InputFrom></InputFrom> */}
           {/* <UncontrolledFrom></UncontrolledFrom> */}
           {/* <ControlledFrom></ControlledFrom> */}
-          <FullForm></FullForm>
+          {/* <FullForm></FullForm> */}
+          <SignUp />
         </div>
        
       
