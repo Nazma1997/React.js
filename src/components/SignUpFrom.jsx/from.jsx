@@ -15,6 +15,30 @@ const FromField = ({values, handleChange, handleSubmit, handleAgreement}) => {
            onChange={handleChange}
 
         />
+        <Input 
+            label='Enter Your Email'
+            type='email'
+            values = {values.email}
+            name = 'email'
+            placeholder='Enter Your Email'
+            onChange={handleChange}
+        />
+        <Input 
+           label='Enter Your Password'
+           type='password'
+           values ={ values.password}
+           name= 'password'
+           placeholder='Enter Your Password'
+           onChange={handleChange}
+        />
+        <Input 
+           label='Provide Your BirthDate'
+           type='date'
+           values= {values.birthDate}
+           name= 'birthDate'
+           placeholder='Give Your Birth Date'
+           onChange={handleChange}
+        />
         <button type='submit'>Create User</button>
       </form>
   )
