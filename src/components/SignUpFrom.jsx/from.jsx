@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Input from './input';
 // import Checked from './checked';
 
-const FromField = ({values, handleChange, handleSubmit, handleAgreement}) => {
+const FromField = ({values, handleChange, handleSubmit, handleAgreement, agreement}) => {
   return(
       <form onSubmit={handleSubmit}>
         <Input 
@@ -49,14 +49,31 @@ const FromField = ({values, handleChange, handleSubmit, handleAgreement}) => {
             <input type="radio" name='gender' value= 'Female' onChange={handleChange}/> Female
 
             <input type="radio" name='gender' value='Others' onChange={handleChange}/> Others
+            
           </div>
-        <button type='submit'>Create User</button>
+
+          <div>
+          <label>
+              <input
+                   type="checkbox"
+                   
+                   name='agreement'
+                   checked={agreement}
+                   onChange= {handleAgreement}
+               />
+            </label> I agree this terms and policy
+          </div>
+         
+          
+          
+        <button style={{backgroundColor:'goldenrod', color:'white', marginTop:'5px'}} type='submit' >Create User</button>
       </form>
   )
 }
 
 FromField.propTypes ={
   values: PropTypes.object.isRequired,
+  agreement: PropTypes.bool.isRequired,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired
 }

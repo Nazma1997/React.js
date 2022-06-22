@@ -36,10 +36,10 @@ class SignUp extends Component {
 
    handleSubmit = event => {
     event.preventDefault()
-    console.log(this.state.values)
+    console.log(this.state)
 
     event.target.reset();
-    this.setState({initValues})
+    // this.setState({initValues})
    }
   render(){
     return(
@@ -50,6 +50,7 @@ class SignUp extends Component {
             values={this.state}
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
+            handleAgreement= {this.handleAgreement}
             
          />
       </div>
