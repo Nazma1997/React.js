@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 import PropTypes from 'prop-types';
 import Input from './input';
-import Checked from './checked';
+// import Checked from './checked';
 
 const FromField = ({values, handleChange, handleSubmit, handleAgreement}) => {
   return(
@@ -40,9 +40,16 @@ const FromField = ({values, handleChange, handleSubmit, handleAgreement}) => {
            placeholder='Give Your Birth Date'
            onChange={handleChange}
         />
-        <Checked 
+        {/* <Checked 
             onChange={handleChange}
-        />
+        /> */}
+        <div>
+            <input type="radio" name='gender' value= 'Male' onChange={handleChange}/> Male
+
+            <input type="radio" name='gender' value= 'Female' onChange={handleChange}/> Female
+
+            <input type="radio" name='gender' value='Others' onChange={handleChange}/> Others
+          </div>
         <button type='submit'>Create User</button>
       </form>
   )
