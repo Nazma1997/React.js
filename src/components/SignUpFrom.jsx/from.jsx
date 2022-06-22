@@ -2,6 +2,7 @@ import React from 'react';
 import '../../App.css';
 import PropTypes from 'prop-types';
 import Input from './input';
+import Checked from './checked';
 
 const FromField = ({values, handleChange, handleSubmit, handleAgreement}) => {
   return(
@@ -38,6 +39,9 @@ const FromField = ({values, handleChange, handleSubmit, handleAgreement}) => {
            name= 'birthDate'
            placeholder='Give Your Birth Date'
            onChange={handleChange}
+        />
+        <Checked 
+            onChange={handleChange}
         />
         <button type='submit'>Create User</button>
       </form>
