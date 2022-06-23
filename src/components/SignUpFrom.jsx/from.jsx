@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 import Input from './input';
 // import Checked from './checked';
 
-const FromField = ({values, handleChange, handleSubmit, handleAgreement, agreement}) => {
+const FromField = ({values, handleChange, handleSubmit, handleAgreement, agreement,errors}) => {
   return(
       <form onSubmit={handleSubmit}>
         <Input 
            label='Enter Your Name'
            type= 'text'
            values={values.name}
+           error= {errors.name}
            name= 'name'
            placeholder='Enter Your Name'
            onChange={handleChange}
@@ -20,6 +21,7 @@ const FromField = ({values, handleChange, handleSubmit, handleAgreement, agreeme
             label='Enter Your Email'
             type='email'
             values = {values.email}
+            error= {errors.email}
             name = 'email'
             placeholder='Enter Your Email'
             onChange={handleChange}
@@ -28,6 +30,7 @@ const FromField = ({values, handleChange, handleSubmit, handleAgreement, agreeme
            label='Enter Your Password'
            type='password'
            values ={ values.password}
+           error= {errors.password}
            name= 'password'
            placeholder='Enter Your Password'
            onChange={handleChange}
@@ -36,6 +39,7 @@ const FromField = ({values, handleChange, handleSubmit, handleAgreement, agreeme
            label='Provide Your BirthDate'
            type='date'
            values= {values.birthDate}
+           error= {errors.birthDate}
            name= 'birthDate'
            placeholder='Give Your Birth Date'
            onChange={handleChange}
@@ -50,6 +54,7 @@ const FromField = ({values, handleChange, handleSubmit, handleAgreement, agreeme
 
             <input type="radio" name='gender' value='Others' onChange={handleChange}/> Others
             
+            {errors.gender && <div className='input:invalid'>{errors.gender} </div>}
           </div>
 
           <div>
@@ -66,13 +71,14 @@ const FromField = ({values, handleChange, handleSubmit, handleAgreement, agreeme
          
           
           
-        <button style={{backgroundColor:'goldenrod', color:'white', marginTop:'5px'}} type='submit' >Create User</button>
+        <button style={{ marginTop:'5px'}} disabled={!agreement} type='submit' >Create User</button>
       </form>
   )
 }
 
 FromField.propTypes ={
   values: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired,
   agreement: PropTypes.bool.isRequired,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired

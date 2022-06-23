@@ -48,7 +48,13 @@ input{
   text-align: center;
   
 } */
-
+ input:invalid{
+  border: 2px solid red;
+}
+input:valid + span::before {
+  content: '✓';
+  color: green;
+}
 .InputField{
   width: 100%;
   padding: 12px 60px 12px 60px;

@@ -7,7 +7,8 @@ const Input = props => {
     <div>
           <label htmlFor={props.name}>{props.label}</label>
           <input
-              className='InputField'
+             
+             className='InputField'
               type={props.type}
               name={props.name}
               id={props.name}
@@ -15,6 +16,7 @@ const Input = props => {
               placeholder={props.placeholder}
               onChange={props.onChange}
            />
+           {props.error && <div className='input:invalid'> {props.error} </div>}
     </div>
   )
 }
@@ -25,7 +27,8 @@ Input.propTypes = {
   value: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  error: PropTypes.string
 }
 
 Input.defaultProps ={ 
