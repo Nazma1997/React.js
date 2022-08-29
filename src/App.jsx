@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css'
-import SignUp from './components/SignUpFrom.jsx/SignUp';
+// import SignUp from './components/SignUpFrom.jsx/SignUp';
+import Todo from './useState/useState';
 
 // import FullForm from './components/splite-From/spliteFrom';
 // import ControlledFrom from './components/controlledFrom';
@@ -21,7 +22,8 @@ class App extends Component {
           {/* <UncontrolledFrom></UncontrolledFrom> */}
           {/* <ControlledFrom></ControlledFrom> */}
           {/* <FullForm></FullForm> */}
-          <SignUp />
+          {/* <SignUp /> */}
+          <Todo />
         </div>
        
       
